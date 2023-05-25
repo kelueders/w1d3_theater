@@ -1,0 +1,217 @@
+/* styling for body layout */
+
+.grid-container-body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.4fr 2fr 1fr;
+    grid-row-gap: 20px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
+    grid-area: header;
+    border-style: solid;
+    border-color:black;
+}
+
+.main {
+    grid-area: main;
+    border-style: solid;
+    border-color:black;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+
+
+/* styling for each of three sections: header, main, footer */
+
+.grid-container-header {
+    display: grid;
+    background-image: url("../images/theater-background.png");
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 5% 95%;
+    grid-template-areas: 
+        "steppenwolf navigation"
+        "featured featured";
+    color: white;
+}
+
+.steppenwolf {
+    grid-area: steppenwolf;
+    padding-top: 7%;
+    padding-left: 15%;
+    font-size: 1.2em;
+}
+
+.navigation {
+    grid-area: navigation;
+}
+
+.featured {
+    grid-area: featured;
+    text-align: center;
+    padding-top: 20%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    padding: 5%;
+}
+
+/* main */
+
+.grid-container-main {
+    display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: 20vw 20vw 20vw;
+    grid-template-rows: 5vh 20vh 20vh 20vh 20vh;
+    /* grid-template-rows: 0.5fr 0.1fr 1fr 1fr 1fr 1fr; */
+    grid-template-areas:
+        "date date date"
+        "show1 info1 button1"
+        "show2 info2 button2"
+        "show3 info3 button3"
+        "show4 info4 button4";
+    justify-content: center;
+    width: 100%;
+    margin-top: 80px;
+    font-size: 90%;
+}
+
+.date {
+    grid-area: date;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.show1 {
+    grid-area: show1;
+    justify-content: center;
+}
+
+.info1 {
+    grid-area: info1;
+}
+
+.button1 {
+    grid-area: button1;
+}
+
+.show2 {
+    grid-area: show2;
+}
+
+.info2 {
+    grid-area: info2;
+}
+
+.button2 {
+    grid-area: button2;
+}
+
+.show3 {
+    grid-area: show3;
+}
+
+.info3 {
+    grid-area: info3;
+}
+
+.button3 {
+    grid-area: button3;
+}
+
+.show4 {
+    grid-area: show4;
+}
+
+.info4 {
+    grid-area: info4;
+}
+
+.button4 {
+    grid-area: button4;
+}
+
+.button1, .button2, .button3, .button4 {
+    padding: 10% 10% 0% 40%
+}
+
+#show-box {
+    border-style: none none solid none;
+    border-width: 1px;
+}
+
+#show-pic {
+    margin-top: 10%;
+    margin-left: 15%;
+    width: 110px;
+    height: 100px;
+    /* width: 82%;
+    height: 75%; */
+}
+
+#show-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#show-list > li {
+    margin: 10px;
+}
+
+#show-list > li:first-child {
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(226, 128, 16);
+    color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    padding: 7px;
+}
+
+
+/* footer */
+
+.container-footer {
+    display: flex;
+    justify-content: space-evenly;
+    grid-area: footer;
+    border-style: solid;
+    border-color:black;
+    background-color: black;
+    color: white;
+    font-size: small;
+}
+
+.container-footer div {
+    margin: 80px 10px 80px 10px;
+}
+
+#footer-lists {
+    list-style-type: none;
+    padding: 0;
+}
+
+#footer-lists > li {
+    margin-top:25px;
+}
+
+.map img {
+    height: 150px;
+}
